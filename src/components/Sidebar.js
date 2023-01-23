@@ -6,12 +6,14 @@ const Sidebar = () => {
     <>
       <div className="side-bar">
         <div className="side-bar-top">
-          <Image
-            src="/image/dapp-logo.png"
-            alt="dapp-logo"
-            height={42}
-            width={168}
-          />
+          <Link href="https://swopnew.netlify.app" target="_blank">
+            <Image
+              src="/image/dapp-logo.png"
+              alt="dapp-logo"
+              height={42}
+              width={168}
+            />
+          </Link>
           <ul>
             <li id="active-menu">
               <Link href="/dapp-store">DApp Store</Link>
