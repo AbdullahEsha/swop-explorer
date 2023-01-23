@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.side-bar {
+  background-color: #f2f2f2;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 100vh;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+}
+.side-bar-top {
+  padding-top: 50px;
+  padding-left: 40px;
+}
+.footer-side-bar-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.footer-side-bar-travis h4 {
+  margin: 0px;
+}
+.side-bar ul {
+  padding: 0px;
+}
+.side-bar ul li {
+  list-style-type: none;
+  margin: 10px 0px;
+}
+.side-bar ul li a {
+  color: #aeaeae;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.footer-side-bar {
+  width: 100%;
+  align-self: end;
+}
+.container {
+  display: flex;
+}
+.main-container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content {
+  margin-left: 250px;
+  overflow: auto;
+  width: 100%;
+}
+.footer-side-bar {
+  text-align: -webkit-center;
+  padding-bottom: 20px;
+}
+.footer-qrcode {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 100px;
+  width: auto;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+}
+.travis {
+  border-radius: 50%;
+  border: 3px solid #c2c2c2;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+}
+#active-menu {
+  background-color: #e2e7ff;
+  margin-left: -30px;
+  padding: 10px 30px;
+  width: 230px;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+#active-menu a {
+  color: #000;
+}
+.search-connect {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  align-items: center;
+}
+.dapp-rocket {
+  height: 50px;
+  width: auto;
+  transform: scale(1.5);
+}
+.search-connect input {
+  height: 50px;
+  width: 900px;
+  border-radius: 15px;
+  background-color: #fafafa;
+  border: 0.5px solid #dddddda6;
+  padding-left: 80px;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+  transition: 0.4s ease;
+  font-size: 16px;
+  margin-left: -25px;
+}
+.dappsearch-icon {
+  position: relative;
+  left: 55px;
+  top: 0px;
+  height: auto;
+  width: 25px;
+}
+.search-connect input:focus {
+  outline: none;
+}
+.search-connect button {
+  background-image: linear-gradient(to top, #8973e4, #b97cde);
+  border: 0px;
+  height: 50px;
+  width: 120px;
+  padding-left: 20px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-left: -15px;
+}
+.connect-icon {
+  height: 15px;
+  width: auto;
+  position: relative;
+  left: 50px;
+}
+/* D app page start */
+.d-app-search h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.d-app-search {
+  text-align: center;
+  margin: 35px 0px;
+}
+.d-app-search input {
+  height: 50px;
+  width: 750px;
+  border-radius: 15px;
+  background-color: #fafafa;
+  border: 0.5px solid #dddddda6;
+  padding-left: 80px;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+  transition: 0.4s ease;
+  font-size: 16px;
+  margin-left: -25px;
+}
+.d-app-search input:focus {
+  outline: 0;
+}
+.d-app-search img {
+  position: relative;
+  left: 35px;
+  top: 8px;
+  height: auto;
+  width: 25px;
+}
+.dapp-slider-card .main_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+  transition: 0.4s ease;
+}
+.dapp-slider-card .main_img:hover {
+  transform: scale(1.01);
+}
+.dapp-categories .dapp-slider-card .main_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+  transition: 0.4s ease;
+  margin-bottom: -15px;
+}
+.dapp-slider .swiper-slide {
+  margin-left: -2px !important;
+}
+.dapp-slider h2 {
+  margin: 0px;
+}
+.dapp-slider {
+  margin: 50px 0px;
+}
+.dapp-categories {
+  margin: 50px 0px;
+}
+.dapp-categories .swiper-slide {
+  margin-left: -2px !important;
+}
+.dapp-card-content {
+  display: flex;
+  align-items: center;
+}
+.dapp-card-content-inside h4 {
+  margin: 0px;
+}
+.dapp-card-content-inside p {
+  margin: 0px;
+}
+.dapp-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.dapp-bottom div img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+  transition: 0.4s ease;
+}
+.dapp-bottom div img:hover {
+  transform: scale(1.02);
+}
+.dapp-bottom div h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0px;
+  text-align: center;
+}
+.dapp-bottom1 {
+  width: calc(100% / 9);
+  height: 100%;
+}
+.dapp-viewed {
+  margin: 50px 0px;
+}
+.dapp-slider-card h6 {
+  margin: 0px;
+  text-align: center;
+  position: relative;
+  top: -35px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+.heading-dapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading-dapp label {
+  color: #adadad;
+  cursor: pointer;
+}
+/* D app page end */
