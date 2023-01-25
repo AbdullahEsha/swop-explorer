@@ -13,33 +13,59 @@ body {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 100vh;
-  width: 250px;
+  width: 300px;
   display: flex;
   flex-wrap: wrap;
   position: fixed;
 }
 .side-bar-top {
   padding-top: 50px;
-  padding-left: 40px;
+  width: 100%;
 }
-.footer-side-bar-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+.swop-logo {
+  padding-left: 65px;
+}
+#active-menu a {
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
 }
 .side-bar ul {
   padding: 0px;
 }
 .side-bar ul li {
   list-style-type: none;
-  margin: 10px 0px;
+  padding: 3px 40px;
 }
 .side-bar ul li a {
   color: #aeaeae;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 25px;
+  transition: 1s ease;
+}
+.side-bar ul li a:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
+}
+.dapp-mid-line {
+  display: none;
+}
+.dapp-three-line {
+  display: none;
+}
+.footer-side-bar-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 .footer-side-bar {
   width: 100%;
@@ -54,7 +80,7 @@ body {
   margin-right: auto;
 }
 .main-content {
-  margin-left: 250px;
+  margin-left: 300px;
   overflow: auto;
   width: 100%;
 }
@@ -65,7 +91,7 @@ body {
 .footer-qrcode {
   background-color: #fff;
   border-radius: 10px;
-  height: 100px;
+  height: 80px;
   width: auto;
   box-shadow: 0px 0px 31px rgb(0 0 0 / 12%);
 }
@@ -84,17 +110,6 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
-#active-menu {
-  background-color: #e2e7ff;
-  margin-left: -30px;
-  padding: 10px 30px;
-  width: 230px;
-  border-radius: 10px;
-  transition: 0.4s ease;
-}
-#active-menu a {
-  color: #000;
-}
 .search-connect {
   display: flex;
   justify-content: space-between;
@@ -102,9 +117,8 @@ body {
   align-items: center;
 }
 .dapp-rocket {
-  height: 50px;
+  height: 80px;
   width: auto;
-  transform: scale(1.5);
 }
 .search-connect input {
   height: 50px;
@@ -120,7 +134,7 @@ body {
 }
 .dappsearch-icon {
   position: relative;
-  left: 55px;
+  left: 45px;
   top: 0px;
   height: auto;
   width: 25px;
@@ -143,9 +157,8 @@ body {
   height: 15px;
   width: auto;
   position: relative;
-  left: 50px;
+  left: 35px;
 }
-/* D app page start */
 .d-app-search h1 {
   font-size: 32px;
   font-weight: 600;
@@ -265,4 +278,122 @@ body {
   color: #adadad;
   cursor: pointer;
 }
-/* D app page end */
+
+@media only screen and (min-width: 1201px) and (max-width: 1520px) {
+  .main-container {
+    width: 850px;
+  }
+  .search-connect input {
+    width: 555px;
+  }
+  .search-connect {
+    height: 110px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .main-container {
+    width: 685px;
+  }
+  .search-connect input {
+    width: 415px;
+  }
+  .search-connect {
+    height: 110px;
+  }
+  .side-bar {
+    width: 250px;
+  }
+  .main-content {
+    margin-left: 250px;
+  }
+  .side-bar ul li {
+    padding: 3px 15px;
+  }
+  .swop-logo {
+    padding-left: 40px;
+  }
+  .dapp-rocket {
+    height: 60px;
+  }
+  .dapp-bottom1 {
+    width: calc(100% / 7);
+  }
+  .dapp-bottom {
+    gap: 10px;
+  }
+  .dapp-categories,
+  .dapp-viewed,
+  .dapp-slider {
+    margin: 25px 0px;
+  }
+  .dapp-slider-card h6 {
+    top: -15px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-content {
+    margin-left: 0px;
+  }
+  .main-container {
+    width: 685px;
+  }
+  .search-connect input {
+    width: 100%;
+    padding-left: 120px;
+    margin-left: -52px;
+  }
+  .search-connect {
+    height: 110px;
+  }
+  .side-bar {
+    width: 250px;
+  }
+  .side-bar ul li {
+    padding: 3px 15px;
+  }
+  .swop-logo {
+    padding-left: 40px;
+  }
+  .dapp-rocket {
+    display: none;
+  }
+  .dapp-bottom1 {
+    width: calc(100% / 7);
+  }
+  .dapp-bottom {
+    gap: 10px;
+  }
+  .dapp-categories,
+  .dapp-viewed,
+  .dapp-slider {
+    margin: 25px 0px;
+  }
+  .dapp-slider-card h6 {
+    top: -15px;
+    font-size: 13px;
+  }
+  .search-connect button {
+    display: none;
+  }
+  .connect-icon {
+    display: none;
+  }
+  .dappsearch-icon {
+    left: 45px;
+  }
+  .dapp-mid-line {
+    display: block;
+    height: 25px;
+    width: 2px;
+    position: relative;
+    left: 35px;
+  }
+  .dapp-three-line {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+  }
+}

@@ -70,6 +70,20 @@ export default function Home() {
                 className="dapp-rocket"
               />
               <Image
+                src="/image/dappthreeline.png"
+                alt="dapp-mid-line"
+                height={117}
+                width={180}
+                className="dapp-three-line"
+              />
+              <Image
+                src="/image/dappmidline.png"
+                alt="dapp-mid-line"
+                height={117}
+                width={180}
+                className="dapp-mid-line"
+              />
+              <Image
                 src="/image/dappsearch.png"
                 alt="dappsearch-icon"
                 height={37}
