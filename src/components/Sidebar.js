@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaChartPie } from 'react-icons/fa'
@@ -12,7 +13,7 @@ const Sidebar = () => {
 
   return (
     <>
-      {width > 991 && (
+      {width > 991 ? (
         <div className="side-bar">
           <div className="side-bar-top">
             <Link
@@ -88,6 +89,31 @@ const Sidebar = () => {
               className="footer-qrcode"
             />
           </div>
+        </div>
+      ) : (
+        <div className="mobilenav-menu-hidden">
+          <Link href="/dapp-store">
+            <FaChartPie size={20} />
+            DApp Store
+          </Link>
+          <Link href="/">
+            <BsPeopleFill size={20} /> Explorer
+          </Link>
+          <Link href="/">
+            <MdOutlineEventNote size={20} /> Prices
+          </Link>
+          <Link href="/">
+            <RxDragHandleDots2 size={20} /> Accounting
+          </Link>
+          <Link href="/">
+            <RiMoneyDollarCircleLine size={20} /> Swop Pay
+          </Link>
+          <Link href="/">
+            <BsBoxSeam size={20} /> Mint Machine
+          </Link>
+          <Link href="/">
+            <RiErrorWarningLine size={20} /> Purchase
+          </Link>
         </div>
       )}
     </>

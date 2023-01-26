@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import HeadComponent from '@/components/HeadComponent'
 import Sidebar from '@/components/Sidebar'
 import Image from 'next/image'
@@ -11,6 +12,21 @@ import 'swiper/css/pagination'
 
 export default function Home() {
   const { width } = useWindowDimensions()
+  const [menu, setMenu] = useState(false)
+
+  const [show, handleShow] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        handleShow(true)
+      } else handleShow(false)
+    })
+    return () => {
+      window.removeEventListener('scroll', null)
+    }
+  }, [])
+
   SwiperCore.use([Autoplay])
   const sliderData = [
     {
@@ -54,11 +70,12 @@ export default function Home() {
       title: 'Music',
     },
   ]
+
   return (
     <>
       <HeadComponent />
       <div className="container">
-        <Sidebar />
+        {width > 991 && <Sidebar />}
         <div className="main-content">
           <div className="main-container">
             <div className="search-connect">
@@ -69,18 +86,57 @@ export default function Home() {
                 width={180}
                 className="dapp-rocket"
               />
-              <Image
-                src="/image/dappthreeline.png"
-                alt="dapp-mid-line"
-                height={117}
-                width={180}
-                className="dapp-three-line"
-              />
+              {menu === false ? (
+                <Image
+                  src="/image/dappthreeline.png"
+                  alt="dapp-three-line"
+                  height={117}
+                  width={180}
+                  className="dapp-three-line"
+                  onClick={() => {
+                    setMenu(true)
+                    document.querySelector(
+                      '.mobilenav-menu-hidden',
+                    ).style.display = 'grid'
+                    document.querySelector(
+                      '.search-connect input',
+                    ).style.border = 'none'
+                    document.querySelector(
+                      '.search-connect input',
+                    ).style.boxShadow = 'none'
+                    document.querySelector('.search-connect').style.boxShadow =
+                      '0px 0px 31px rgb(0 0 0 / 12%)'
+                    document.querySelector(
+                      '.search-connect input',
+                    ).style.borderTopRightRadius = '15px'
+                    document.querySelector(
+                      '.search-connect input',
+                    ).style.borderTopLeftRadius = '15px'
+                  }}
+                />
+              ) : (
+                <Image
+                  src="/image/dappcross.png"
+                  alt="dapp-three-line"
+                  height={25}
+                  width={25}
+                  className="dapp-cross"
+                  onClick={() => {
+                    setMenu(false)
+                    document.querySelector(
+                      '.mobilenav-menu-hidden',
+                    ).style.display = 'none'
+                    document.querySelector(
+                      '.search-connect input',
+                    ).style.borderRadius = '15px'
+                  }}
+                />
+              )}
               <Image
                 src="/image/dappmidline.png"
                 alt="dapp-mid-line"
-                height={117}
-                width={180}
+                height={25}
+                width={3}
                 className="dapp-mid-line"
               />
               <Image
@@ -99,7 +155,9 @@ export default function Home() {
                 className="connect-icon"
               />
               <button>Connect</button>
+              {width < 992 && <Sidebar />}
             </div>
+
             <div className="dapp-slider">
               <h2>Trending</h2>
               <Swiper
@@ -192,6 +250,7 @@ export default function Home() {
                     src={`/image/swoppay.png`}
                     alt="no_image"
                     height={184}
+                    dapp-mid-line
                     width={184}
                   />
                   <h4>Swop pay</h4>
@@ -232,7 +291,7 @@ export default function Home() {
                   modifier: 3,
                   slideShadows: false,
                 }}
-                slidesPerView={width < 767 ? 1.5 : 5}
+                slidesPerView={width < 767 ? 2.8 : 5}
                 spaceBetween={35}
                 pagination={{
                   dynamicBullets: true,

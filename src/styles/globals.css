@@ -60,6 +60,7 @@ body {
 }
 .dapp-three-line {
   display: none;
+  z-index: 1;
 }
 .footer-side-bar-bottom {
   display: flex;
@@ -115,6 +116,8 @@ body {
   justify-content: space-between;
   height: 150px;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px);
 }
 .dapp-rocket {
   height: 80px;
@@ -138,6 +141,7 @@ body {
   top: 0px;
   height: auto;
   width: 25px;
+  z-index: 1;
 }
 .search-connect input:focus {
   outline: none;
@@ -279,6 +283,31 @@ body {
   cursor: pointer;
 }
 
+/* Mobile Navber start */
+.mobilenav-menu-hidden {
+  display: none;
+  width: 685px;
+  z-index: 2;
+  padding: 15px 0px;
+  gap: 15px;
+}
+.mobilenav-menu-hidden a {
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+}
+.colorNav {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px);
+}
+.mobilenav-menu-hidden a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 30px;
+}
+/* Mobile Navber end */
+
 @media only screen and (min-width: 1201px) and (max-width: 1520px) {
   .main-container {
     width: 850px;
@@ -341,10 +370,18 @@ body {
   .search-connect input {
     width: 100%;
     padding-left: 120px;
+    padding-right: 120px;
     margin-left: -52px;
+    margin-right: -110px;
   }
   .search-connect {
-    height: 110px;
+    position: fixed;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    z-index: 3;
+    width: 685px;
+    height: auto;
+    border-radius: 15px;
   }
   .side-bar {
     width: 250px;
@@ -369,15 +406,24 @@ body {
   .dapp-slider {
     margin: 25px 0px;
   }
+  .dapp-slider {
+    padding-top: 80px;
+  }
   .dapp-slider-card h6 {
     top: -15px;
     font-size: 13px;
   }
   .search-connect button {
-    display: none;
+    position: relative;
+    height: 36px;
+    width: 110px;
+    right: 7px;
+    border-radius: 10px;
   }
   .connect-icon {
-    display: none;
+    position: relative;
+    z-index: 1;
+    left: 10px;
   }
   .dappsearch-icon {
     left: 45px;
@@ -388,6 +434,7 @@ body {
     width: 2px;
     position: relative;
     left: 35px;
+    z-index: 1;
   }
   .dapp-three-line {
     display: block;
@@ -395,5 +442,298 @@ body {
     width: 25px;
     position: relative;
     left: 25px;
+  }
+  .dapp-cross {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+    z-index: 1;
+  }
+}
+@media only screen and (min-width: 561px) and (max-width: 767px) {
+  .main-content {
+    margin-left: 0px;
+  }
+  .main-container {
+    width: 550px;
+  }
+  .search-connect input {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-left: -52px;
+    margin-right: -110px;
+  }
+  .search-connect {
+    position: fixed;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    z-index: 3;
+    width: 550px;
+    height: auto;
+    border-radius: 15px;
+  }
+  .side-bar {
+    width: 250px;
+  }
+  .side-bar ul li {
+    padding: 3px 15px;
+  }
+  .swop-logo {
+    padding-left: 40px;
+  }
+  .dapp-rocket {
+    display: none;
+  }
+  .dapp-bottom1 {
+    width: calc(100% / 7);
+  }
+  .dapp-bottom {
+    gap: 10px;
+  }
+  .dapp-categories,
+  .dapp-viewed,
+  .dapp-slider {
+    margin: 25px 0px;
+  }
+  .dapp-slider {
+    padding-top: 80px;
+  }
+  .dapp-slider-card h6 {
+    top: -15px;
+    font-size: 13px;
+  }
+  .search-connect button {
+    position: relative;
+    height: 36px;
+    width: 110px;
+    right: 7px;
+    border-radius: 10px;
+  }
+  .connect-icon {
+    position: relative;
+    z-index: 1;
+    left: 10px;
+  }
+  .dappsearch-icon {
+    left: 45px;
+  }
+  .dapp-mid-line {
+    display: block;
+    height: 25px;
+    width: 2px;
+    position: relative;
+    left: 35px;
+    z-index: 1;
+  }
+  .dapp-three-line {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+  }
+  .dapp-cross {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+    z-index: 1;
+  }
+  .dapp-bottom div h4 {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 560px) {
+  .main-content {
+    margin-left: 0px;
+  }
+  .main-container {
+    width: 415px;
+  }
+  .search-connect input {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-left: -52px;
+    margin-right: -110px;
+  }
+  .search-connect {
+    position: fixed;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    z-index: 3;
+    width: 415px;
+    height: auto;
+    border-radius: 15px;
+  }
+  .side-bar {
+    width: 250px;
+  }
+  .side-bar ul li {
+    padding: 3px 15px;
+  }
+  .swop-logo {
+    padding-left: 40px;
+  }
+  .dapp-rocket {
+    display: none;
+  }
+  .dapp-bottom1 {
+    width: calc(100% / 5);
+  }
+  .dapp-bottom {
+    gap: 10px;
+  }
+  .dapp-categories,
+  .dapp-viewed,
+  .dapp-slider {
+    margin: 25px 0px;
+  }
+  .dapp-slider {
+    padding-top: 80px;
+  }
+  .dapp-slider-card h6 {
+    top: -15px;
+    font-size: 13px;
+  }
+  .search-connect button {
+    position: relative;
+    height: 36px;
+    width: 110px;
+    right: 7px;
+    border-radius: 10px;
+  }
+  .connect-icon {
+    position: relative;
+    z-index: 1;
+    left: 10px;
+  }
+  .dappsearch-icon {
+    left: 45px;
+  }
+  .dapp-mid-line {
+    display: block;
+    height: 25px;
+    width: 2px;
+    position: relative;
+    left: 35px;
+    z-index: 1;
+  }
+  .dapp-three-line {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+  }
+  .dapp-cross {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+    z-index: 1;
+  }
+  .dapp-bottom div h4 {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .main-content {
+    margin-left: 0px;
+  }
+  .main-container {
+    width: 370px;
+  }
+  .search-connect input {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-left: -52px;
+    margin-right: -110px;
+  }
+  .search-connect {
+    position: fixed;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    z-index: 3;
+    width: 370px;
+    height: auto;
+    border-radius: 15px;
+  }
+  .side-bar {
+    width: 250px;
+  }
+  .side-bar ul li {
+    padding: 3px 15px;
+  }
+  .swop-logo {
+    padding-left: 40px;
+  }
+  .dapp-rocket {
+    display: none;
+  }
+  .dapp-bottom1 {
+    width: calc(100% / 5);
+  }
+  .dapp-bottom {
+    gap: 10px;
+  }
+  .dapp-categories,
+  .dapp-viewed,
+  .dapp-slider {
+    margin: 25px 0px;
+  }
+  .dapp-slider {
+    padding-top: 80px;
+  }
+  .dapp-slider-card h6 {
+    top: -15px;
+    font-size: 13px;
+  }
+  .search-connect button {
+    position: relative;
+    height: 36px;
+    width: 110px;
+    right: 7px;
+    border-radius: 10px;
+  }
+  .connect-icon {
+    position: relative;
+    z-index: 1;
+    left: 10px;
+  }
+  .dappsearch-icon {
+    left: 45px;
+  }
+  .dapp-mid-line {
+    display: block;
+    height: 25px;
+    width: 2px;
+    position: relative;
+    left: 35px;
+    z-index: 1;
+  }
+  .dapp-three-line {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+  }
+  .dapp-cross {
+    display: block;
+    height: auto;
+    width: 25px;
+    position: relative;
+    left: 25px;
+    z-index: 1;
+  }
+  .dapp-bottom div h4 {
+    font-size: 15px;
   }
 }
