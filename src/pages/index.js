@@ -71,6 +71,34 @@ export default function Home() {
     },
   ]
 
+  const cryptoexchange = [
+    {
+      id: 1,
+      name: 'Aave',
+      image: 'aave.png',
+    },
+    {
+      id: 2,
+      name: 'Open Sea',
+      image: 'openSea.png',
+    },
+    {
+      id: 3,
+      name: 'Swop Pay',
+      image: 'swoppay.png',
+    },
+    {
+      id: 4,
+      name: 'DyDx',
+      image: 'dyDx.png',
+    },
+    {
+      id: 4,
+      name: '',
+      image: 'bigCross.png',
+    },
+  ]
+
   return (
     <>
       <HeadComponent />
@@ -182,8 +210,7 @@ export default function Home() {
                 style={{
                   width: '100%',
                   margin: 'auto',
-                  padding: '30px',
-                  justifyContent: 'center',
+                  padding: '20px',
                 }}
               >
                 {sliderData.map((item) => (
@@ -217,61 +244,37 @@ export default function Home() {
                 <h2>Previously Viewed</h2> <label>See all</label>
               </div>
 
-              <div className="dapp-bottom">
-                <div className="dapp-bottom1">
-                  <Image
-                    src={`/image/uniswap.png`}
-                    alt="no_image"
-                    height={184}
-                    width={184}
-                  />
-                  <h4>Uniswap</h4>
-                </div>
-                <div className="dapp-bottom1">
-                  <Image
-                    src={`/image/aave.png`}
-                    alt="no_image"
-                    height={184}
-                    width={184}
-                  />
-                  <h4>Aave</h4>
-                </div>
-                <div className="dapp-bottom1">
-                  <Image
-                    src={`/image/openSea.png`}
-                    alt="no_image"
-                    height={184}
-                    width={184}
-                  />
-                  <h4>Open Sea</h4>
-                </div>
-                <div className="dapp-bottom1">
-                  <Image
-                    src={`/image/swoppay.png`}
-                    alt="no_image"
-                    height={184}
-                    dapp-mid-line
-                    width={184}
-                  />
-                  <h4>Swop pay</h4>
-                </div>
-                <div className="dapp-bottom1">
-                  <Image
-                    src={`/image/dyDx.png`}
-                    alt="no_image"
-                    height={184}
-                    width={184}
-                  />
-                  <h4>DyDx</h4>
-                </div>
-                <div className="dapp-bottom1">
-                  <Image
-                    src={`/image/bigCross.png`}
-                    alt="no_image"
-                    height={184}
-                    width={184}
-                  />
-                </div>
+              <div className="crypto_exchange">
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  navigation={false}
+                  effect="coverflow"
+                  coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 3,
+                    slideShadows: false,
+                  }}
+                  spaceBetween={-10}
+                  slidesPerView={width < 767 ? 2.8 : 5}
+                  pagination
+                  style={{ width: '100%', margin: 'auto', padding: '20px' }}
+                >
+                  {cryptoexchange.map((crypto) => (
+                    <SwiperSlide key={crypto.id}>
+                      <div className="crypto_exchange_card">
+                        <Image
+                          src={`/image/${crypto.image}`}
+                          alt={crypto.name}
+                          height={184}
+                          width={184}
+                        />
+                        <h4>{crypto.name}</h4>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
             <div className="dapp-categories">
@@ -300,8 +303,7 @@ export default function Home() {
                 style={{
                   width: '100%',
                   margin: 'auto',
-                  padding: '30px',
-                  justifyContent: 'center',
+                  padding: '20px',
                 }}
               >
                 {categories.map((item) => (
