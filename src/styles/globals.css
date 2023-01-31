@@ -350,6 +350,12 @@ body {
     top: -15px;
     font-size: 13px;
   }
+  .crypto_exchange .swiper-slide {
+    width: 137px !important;
+  }
+  .crypto_exchange_card img {
+    height: 115px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .main-content {
@@ -435,6 +441,12 @@ body {
     position: relative;
     left: 25px;
     z-index: 1;
+  }
+  .crypto_exchange .swiper-slide {
+    width: 137px !important;
+  }
+  .crypto_exchange_card img {
+    height: 115px;
   }
 }
 @media only screen and (min-width: 561px) and (max-width: 767px) {

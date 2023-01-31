@@ -201,7 +201,7 @@ export default function Home() {
                   modifier: 3,
                   slideShadows: false,
                 }}
-                slidesPerView={width < 767 ? 1.5 : 2.6}
+                slidesPerView={width < 768 ? 1.5 : 2.6}
                 spaceBetween={35}
                 pagination={{
                   dynamicBullets: true,
@@ -257,7 +257,7 @@ export default function Home() {
                     slideShadows: false,
                   }}
                   spaceBetween={-10}
-                  slidesPerView={width < 767 ? 2.8 : 5}
+                  slidesPerView={width < 768 ? 2.8 : 5}
                   pagination
                   style={{ width: '100%', margin: 'auto', padding: '20px' }}
                 >
@@ -294,7 +294,7 @@ export default function Home() {
                   modifier: 3,
                   slideShadows: false,
                 }}
-                slidesPerView={width < 767 ? 2.8 : 5}
+                slidesPerView={width < 768 ? 2.8 : 5}
                 spaceBetween={35}
                 pagination={{
                   dynamicBullets: true,
