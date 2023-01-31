@@ -275,6 +275,10 @@ body {
 .crypto_exchange .swiper-slide {
   width: 170px !important;
 }
+.crypto_exchange .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: none;
+}
 
 /* Mobile Navber start */
 .mobilenav-menu-hidden {
@@ -518,10 +522,6 @@ body {
     left: 25px;
     z-index: 1;
   }
-  .crypto_exchange .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    display: none;
-  }
 }
 @media only screen and (min-width: 425px) and (max-width: 560px) {
   .main-content {
@@ -607,10 +607,6 @@ body {
     position: relative;
     left: 25px;
     z-index: 1;
-  }
-  .crypto_exchange .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    display: none;
   }
   .crypto_exchange_card img {
     height: 90px;
@@ -740,10 +736,6 @@ body {
   }
   .dapp-card-content-inside p {
     font-size: 13px;
-  }
-  .crypto_exchange .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    display: none;
   }
   .crypto_exchange_card img {
     height: 90px;
