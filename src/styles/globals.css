@@ -214,14 +214,17 @@ body {
 .dapp-slider .swiper-slide {
   margin-left: -2px !important;
 }
-.dapp-slider h2 {
-  margin: 0px;
-}
 .dapp-slider {
   margin: 50px 0px;
 }
 .dapp-categories {
   margin: 50px 0px;
+}
+.dapp-categories h2,
+.dapp-viewed h2,
+.dapp-slider h2 {
+  font-weight: 700;
+  font-size: 32px;
 }
 .dapp-categories .swiper-slide {
   margin-left: -2px !important;
@@ -315,6 +318,21 @@ body {
   .search-connect {
     height: 110px;
   }
+  .dapp-slider {
+    margin: 0px;
+  }
+  .dapp-viewed {
+    margin: 0px;
+  }
+  .dapp-categories {
+    margin: 0px;
+  }
+  .dapp-categories h2,
+  .dapp-viewed h2,
+  .dapp-slider h2 {
+    margin: 10px 0px;
+    font-size: 26px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .main-container {
@@ -344,7 +362,13 @@ body {
   .dapp-categories,
   .dapp-viewed,
   .dapp-slider {
-    margin: 25px 0px;
+    margin: 10px 0px;
+  }
+  .dapp-categories h2,
+  .dapp-viewed h2,
+  .dapp-slider h2 {
+    margin: 0px;
+    font-size: 22px;
   }
   .dapp-slider-card h6 {
     top: -15px;
@@ -354,7 +378,10 @@ body {
     width: 137px !important;
   }
   .crypto_exchange_card img {
-    height: 115px;
+    height: 100px;
+  }
+  .crypto_exchange_card h4 {
+    font-size: 15px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -395,7 +422,16 @@ body {
   .dapp-categories,
   .dapp-viewed,
   .dapp-slider {
-    margin: 25px 0px;
+    margin: 10px 0px;
+  }
+  .dapp-categories h2,
+  .dapp-viewed h2,
+  .dapp-slider h2 {
+    margin: 0px;
+    font-size: 26px;
+  }
+  .crypto_exchange_card h4 {
+    font-size: 16px;
   }
   .dapp-slider {
     padding-top: 80px;
@@ -487,7 +523,16 @@ body {
   .dapp-categories,
   .dapp-viewed,
   .dapp-slider {
-    margin: 25px 0px;
+    margin: 10px 0px;
+  }
+  .dapp-categories h2,
+  .dapp-viewed h2,
+  .dapp-slider h2 {
+    margin: 0px;
+    font-size: 26px;
+  }
+  .crypto_exchange_card h4 {
+    font-size: 16px;
   }
   .dapp-slider {
     padding-top: 80px;
@@ -573,7 +618,16 @@ body {
   .dapp-categories,
   .dapp-viewed,
   .dapp-slider {
-    margin: 25px 0px;
+    margin: 0px;
+  }
+  .dapp-categories h2,
+  .dapp-viewed h2,
+  .dapp-slider h2 {
+    margin: 0px;
+    font-size: 23px;
+  }
+  .crypto_exchange_card h4 {
+    font-size: 16px;
   }
   .dapp-slider {
     padding-top: 80px;
@@ -669,7 +723,16 @@ body {
   .dapp-categories,
   .dapp-viewed,
   .dapp-slider {
-    margin: 25px 0px;
+    margin: 0px;
+  }
+  .dapp-categories h2,
+  .dapp-viewed h2,
+  .dapp-slider h2 {
+    margin: 0px;
+    font-size: 20px;
+  }
+  .crypto_exchange_card h4 {
+    font-size: 16px;
   }
   .dapp-slider {
     padding-top: 80px;
@@ -723,21 +786,7 @@ body {
     left: 22px;
   }
   .dapp-slider .swiper-slide {
-    margin-left: -5px !important;
-  }
-  .dapp-slider h2 {
-    margin: 0px 0px -15px;
-    font-size: 22px;
-  }
-  .heading-dapp {
-    margin-bottom: 15px;
-  }
-  .heading-dapp h2 {
-    margin: 0px;
-    font-size: 22px;
-  }
-  .dapp-categories .swiper.swiper-initialized.swiper-horizontal {
-    padding: 10px 30px 30px !important;
+    margin-left: -3px !important;
   }
   .dapp-card-content img {
     height: 55px;
